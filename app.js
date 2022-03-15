@@ -195,14 +195,14 @@ app.get('/orders', (req,res)=>{
 // })
 //API to Place Orders
 
-//API to Add Orders insertMany for 1 or more and insertOne for 1
-// app.post('/placeOrder', (req,res)=>{
-//     console.log(req.body)
-//     // db.collection('orders').insertOne(req.body,(err,result)=>{
-//     //     if(err) throw err;
-//     //     res.send('Order Added')
-//     // })
-// })
+// API to Add Orders insertMany for 1 or more and insertOne for 1
+app.post('/placeOrder', (req,res)=>{
+    console.log(req.body)
+    db.collection('orders').insertOne(req.body,(err,result)=>{
+        if(err) throw err;
+        res.send('Order Added')
+    })
+})
 //API to Add Orders insertMany for 1 or more and insertOne for 1
 // API to Select and get Menu Data
 app.post('/menuItem', (req,res)=>{
